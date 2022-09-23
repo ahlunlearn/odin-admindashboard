@@ -5,14 +5,23 @@
 }
 a{
     text-decoration: none;
-    color: black;
+    color: white;
     cursor: pointer;
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    gap: 20px;
+    font-weight: bold;
 }
-a:hover{
-    font-size: larger;
+a:hover, li:hover{
+    transform: scale(1.1);
 }
 li{
     list-style: none;
+}
+
+li a{
+    justify-content: left;
 }
 .container{
     height: 100vh;
@@ -23,13 +32,14 @@ li{
 }
 
 .sidebar{
-    background-color: #39C6FF;
+    background-color: #0E9CE0;
     grid-column: 1;
     grid-row: 1/span 2;
     display: grid;
     grid-template-rows: 1fr 3fr 4fr;
     justify-content: start;
     padding-left: 20px;
+    
 }
 
 
@@ -63,6 +73,57 @@ li{
     display: grid;
     grid-template-columns: 3fr 2fr;
     grid-template-rows: 1fr 1fr;
+    margin: 0 40px;
+    align-items: center;
+}
+
+.header .searchbar{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 10px;
+    align-items:baseline;
+}
+.header .searchbar input{
+    background-color: rgba(226,232,240,255);
+    border: none;
+    border-radius: 30px;
+    max-height: 30px;
+    padding: 10px 20px;
+}
+.header .userinfo{
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    justify-items: center;
+}
+
+.header .user{
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    grid-template-rows: 1fr 2fr;
+}
+
+.header .user .userhead{
+    grid-row: 1 / span 2;
+}
+
+.header .buttons{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 45px;
+}
+
+.header .buttons input{
+    background-color: #0E9CE0;
+    color: white;
+    border: none;
+    height: 40px;
+    border-radius: 40px;
+    font-weight: bolder;
+    font-size: large;
+    cursor: pointer;
+}
+.header .buttons input:hover{
+    transform: scale(1.1);
 }
 
 .content{
