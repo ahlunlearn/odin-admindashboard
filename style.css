@@ -180,7 +180,7 @@ li a{
     grid-row: 2 / span 3;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 500px));
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 200px);
     gap: 30px;
 }
 .projects .cards .card-item{
@@ -190,6 +190,7 @@ li a{
     background-color: white;
     display: grid;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    grid-template-rows: repeat(3,50px);
 }
 .projects .cards .card-item a{
     color: black;
